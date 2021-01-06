@@ -1,0 +1,85 @@
+/* Color variables */
+:root {
+    --gutter-color: green;
+}
+
+/* Make all anchor tags have a smooth transition and a vertical offset to account for the navbar */
+* {
+    scroll-behavior: smooth;
+    scroll-margin-top: 3em;
+}
+
+/* Make the navbar act similar to .no-gutters on a row */
+nav {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+body {
+    background-color: var(--gutter-color);
+}
+
+#body-container {
+    background-color: white;
+    min-height: 100vh;
+}
+
+/* Styling for the footer at the bottom that contains the privacy policy */
+footer {
+    color: #ffffff;
+    background-color: #222222;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 0rem;
+}
+
+/* */
+button.button-social-link {
+    border-radius: 0.5rem;
+}
+/* Remove the link color and onhover text decoration from a link */
+button.button-social-link a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.carousel-iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+  
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Override the jumbotron margins so they're above the jumbotron instead of below 
+   Note: the first jumbotron's margin-top is overridden with the mt-0 class */
+.jumbotron {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#play-store-button, 
+#app-store-button {
+    max-width: 100%;
+    padding: 0.5rem;
+}
+
+@media (min-width: 576px) {
+    /* Shrink the vertical padding of the jumbotron */
+    .jumbotron {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
