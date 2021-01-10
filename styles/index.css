@@ -1,6 +1,6 @@
 /* Color variables */
 :root {
-    --gutter-color: green;
+    --gutter-color: #228B22;
 }
 
 /* Make all anchor tags have a smooth transition and a vertical offset to account for the navbar */
@@ -74,6 +74,10 @@ button.button-social-link a {
 #app-store-button {
     max-width: 100%;
     padding: 0.5rem;
+}
+
+.center{
+    text-align: center;
 }
 
 @media (min-width: 576px) {
