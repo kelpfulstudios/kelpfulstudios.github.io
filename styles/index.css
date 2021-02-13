@@ -1,6 +1,7 @@
 /* Color variables */
 :root {
     --gutter-color: #228B22;
+    --link-color: #B2F8B2;
 }
 
 /* Make all anchor tags have a smooth transition and a vertical offset to account for the navbar */
@@ -19,6 +20,17 @@ body {
     background-color: var(--gutter-color);
 }
 
+/* Special case for the footer since it's the only spot that currently uses a text link in the page.
+   Specialized to only the footer area since a generic a tag targets the twitter icon for some reason.
+   This will NOT work on a light background. */
+a,
+a:hover,
+a:active,
+a:visited {
+    color: var(--link-color);
+}
+
+/* Container for the page content */
 #body-container {
     background-color: white;
     min-height: 100vh;
@@ -35,14 +47,14 @@ footer {
     padding-bottom: 0rem;
 }
 
-/* */
-button.button-social-link {
+/* Round off the edges of social links */
+a.button-social-link {
     border-radius: 0.5rem;
 }
 /* Remove the link color and onhover text decoration from a link */
-button.button-social-link a {
+a.button-social-link {
+    color: #fff;
     text-decoration: none;
-    color: inherit;
 }
 
 .carousel-iframe-container {
@@ -64,10 +76,13 @@ button.button-social-link a {
 }
 
 /* Override the jumbotron margins so they're above the jumbotron instead of below 
-   Note: the first jumbotron's margin-top is overridden with the mt-0 class */
+   Note: the first jumbotron's margin-top is overridden with the mt-0 class
+   Additionally, shrink the vertical margins */
 .jumbotron {
     margin-top: 1rem;
     margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 /* Apply a limit to the width of the store buttons, and add some padding on all sides */
@@ -85,10 +100,14 @@ button.button-social-link a {
     text-align: right;
 }
 
-/* Shrink the vertical padding of the jumbotron */
-.jumbotron {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+/* Add higher contrast to the default MailChimp colors to be compliant with accessibility standards */
+#mc_embed_signup input#mc-embedded-subscribe {
+    background-color: #666666;
+}
+#mc_embed_signup input#mc-embedded-subscribe:hover,
+#mc_embed_signup input#mc-embedded-subscribe:active
+{
+    background-color: #444444;
 }
 
 /* Placeholder media query; aligns with the "small" bootstrap sizing */
