@@ -70,20 +70,27 @@ button.button-social-link a {
     margin-bottom: 1rem;
 }
 
+/* Apply a limit to the width of the store buttons, and add some padding on all sides */
 #play-store-button, 
 #app-store-button {
     max-width: 100%;
     padding: 0.5rem;
 }
 
-.center{
-    text-align: center;
+/* Make the App Store button slightly smaller 
+   (it has a h:w ratio of 3.357, whereas Google Play's button has a ratio of 2.982)
+   and align it to the right so the centering is symmetrical with Google Play's button */
+#app-store-button {
+    max-width: 88.8%;
+    text-align: right;
 }
 
+/* Shrink the vertical padding of the jumbotron */
+.jumbotron {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Placeholder media query; aligns with the "small" bootstrap sizing */
 @media (min-width: 576px) {
-    /* Shrink the vertical padding of the jumbotron */
-    .jumbotron {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
 }
